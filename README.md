@@ -1,7 +1,7 @@
-# ELK_Stack_Project
+# Project-1-Elk
 - - GitHub resitory created during GW University Cybersecurity Bootcamp
 __________________________________________________________________________________________________________________________________
-![Network_Diagram](https://github.com/Francesca-pv/ELK_Stack_Project/blob/main/Diagrams/Network_Diagram.jpg)
+![Network_Diagram](https://github.com/JavierX4429/Elk-Project-1/blob/main/Network%20Diagram.jpg)
 
 This document contains the following details:
 - Description of the Topology

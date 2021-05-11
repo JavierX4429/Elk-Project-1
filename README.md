@@ -12,7 +12,7 @@ This document contains the following details:
 - How to Use the Ansible Build
 
 
-### Description of the Topology
+### Description of the Topology ###
  This repository includes code defining the infrastructure below. 
  
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the "D*mn Vulnerable Web Application."
@@ -31,15 +31,15 @@ The configuration details of each machine may be found below.
 | Name      | Function    | IP Address | Operating System |
 |-----------|-------------|------------|------------------|
 | Jump Box  | Gateway     | 10.0.0.4   | Linux            |
-| DVWA/VM 1 | Web Server  | 10.0.0.5   | Linux            |
-| DVWA/VM 2 | Web Server  | 10.0.0.6   | Linux            |
+| DVWA/VM 1 | Web Server  | 10.0.0.9   | Linux            |
+| DVWA/VM 2 | Web Server  | 10.0.0.8   | Linux            |
 | ELK VM    | Monitoring  | 10.1.0.4   | Linux            |
 
 In additon Azure has provisioned a ** Load Balancer** in front of all machines except for the Jump Box.
 ### Access Policies
 The machines on the internal network are not exposed to the public Internet.
 
-Only the **jump box** machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:'52.173.32.30'
+Only the **jump box** machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:'71.251.63.15'
 
 
 Machines within the network can only be accessed by **each other**. The DWVA 1 and DWVA 2 VMs send trafffic to the ELK server. 
@@ -49,12 +49,12 @@ A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes                 | 52.173.32.30         |
+| Jump Box | Yes                 |    71.251.63.15      |
 | ELK      | No                  | 10.1.0.4             |
-| DVWA 1   | No                  | 10.0.0.5             |
-| DVWA 2   | No                  | 10.0.0.6             |
+| DVWA 1   | No                  | 10.0.0.9             |
+| DVWA 2   | No                  | 10.0.0.8             |
 
-### Elk Configuration
+### Elk Configuration ###
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it's easier to diploy and it allows for less human errors. 
 
@@ -123,9 +123,9 @@ The playbook is duplicatied below.
           - 5044:5044
 ```
 
-### Target Machines & Beats
+### Target Machines & Beats ###
 
-This ELK server is configured to monitor the DWVA 1 and DVWA 2 VMs,at '10.0.0.5' and '10.0.0.6', respectively.
+This ELK server is configured to monitor the DWVA 1 and DVWA 2 VMs,at '10.0.0.9' and '10.0.0.8', respectively.
 
 We have installed the following Beats on these machines:
 
